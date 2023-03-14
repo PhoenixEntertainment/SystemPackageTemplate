@@ -1,23 +1,19 @@
 {
-	"name" : "systemname-server",
+	"name" : "systemname-server_testenv",
 	"tree" : {
 		"$className" : "DataModel",
 
 		"ReplicatedStorage": {
 			"$className" : "ReplicatedStorage",
 			
-			"Packages" : {"$path" : "Packages"}
+			"Packages" : {"$path" : "standalone.project.json"}
 		},
 
 		"ServerScriptService" : {
 			"$className" : "ServerScriptService",
 
 			"Scripts" : {"$path" : "../TestEnv/Server/Scripts"},
-			"Services" : {
-				"$className" : "Folder",
-
-				"ExampleService" : {"$path" : "default.project.json"}
-			}
+			"Services" : {"$path" : "../TestEnv/Server/Services"}
 		},
 
 		"StarterPlayer" : {
@@ -26,8 +22,8 @@
 			"StarterPlayerScripts" : {
 				"$className" : "StarterPlayerScripts",
 
-				"Controllers" : {"$className" : "Folder"},
-				"Scripts" : {"$path" : "../TestEnv/Client/Scripts"}
+				"Scripts" : {"$path" : "../TestEnv/Client/Scripts"},
+				"Controllers" : {"$className" : "Folder"}
 			}
 		},
 

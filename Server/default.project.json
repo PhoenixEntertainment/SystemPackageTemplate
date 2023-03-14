@@ -1,5 +1,5 @@
 {
-	"name" : "userinputsystem-client",
+	"name" : "systemname-server",
 	
 	"tree" : {
 		"$path" : "src"
