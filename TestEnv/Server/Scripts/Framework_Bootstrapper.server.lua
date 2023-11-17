@@ -9,6 +9,7 @@ DragonEngine:Run({
 	ServerPaths = {
 		ModulePaths = {
 			Server = {
+				ServerScriptService.Packages
 			},
 			Shared = {
 				ReplicatedStorage.Packages

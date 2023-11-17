@@ -1,19 +1,28 @@
 {
-	"name" : "systemname-client_testenv",
+	"name" : "environmentsystem_testenv",
 	"tree" : {
 		"$className" : "DataModel",
 
 		"ReplicatedStorage": {
 			"$className" : "ReplicatedStorage",
-			
-			"Packages" : {"$path" : "standalone.project.json"}
+
+			"Packages" : {
+				"$path" : "Packages",
+
+				"system-client" : {"$path" : "src/Client/default.project.json"}
+			}
 		},
 
 		"ServerScriptService" : {
 			"$className" : "ServerScriptService",
 
-			"Scripts" : {"$path" : "../TestEnv/Server/Scripts"},
-			"Services" : {"$className" : "Folder"}
+			"Services" : {"$path" : "TestEnv/Server/Services"},
+			"Scripts" : {"$path" : "TestEnv/Server/Scripts"},
+			"Packages" : {
+				"$path" : "ServerPackages",
+
+				"system-server" : {"$path" : "src/Server/default.project.json"}
+			}
 		},
 
 		"StarterPlayer" : {
@@ -22,8 +31,8 @@
 			"StarterPlayerScripts" : {
 				"$className" : "StarterPlayerScripts",
 
-				"Scripts" : {"$path" : "../TestEnv/Client/Scripts"},
-				"Controllers" : {"$path" : "../TestEnv/Client/Controllers"}
+				"Scripts" : {"$path" : "TestEnv/Client/Scripts"},
+				"Controllers" : {"$path" : "TestEnv/Client/Controllers"}
 			}
 		},
 
@@ -37,33 +46,13 @@
 
 		"Workspace" : {
 			"$className" : "Workspace",
-			"$properties" :  {
-				"AllowThirdPartySales" : false,
-				"FallenPartsDestroyHeight" : -500,
-				"FilteringEnabled" : true,
-				"Gravity" : 196.2, 
-				"StreamingEnabled" : false,
-				"StreamingMinRadius" : 64,
-				"StreamingPauseMode" : "Default",
-				"StreamingTargetRadius" : 1024,
-				"TouchesUseCollisionGroups" : true,
-				"HumanoidOnlySetCollisionsOnStateChange" : {
-					"Enum" : 2
-				},
-				"AnimationWeightedBlendFix" : {
-					"Enum" : 2
-				},
-				"ReplicateInstanceDestroySetting" : {
-					"Enum" : 2
-				}
-			},
 
-			"Map" : {"$path" : "../TestEnv/Assets/Map.rbxm"}
+			"Map" : {"$path" : "TestEnv/Assets/Map.rbxm"}
 		},
 
 		"Lighting" : {
 			"$className" : "Lighting",
-			"$path" : "../TestEnv/Assets/Lighting",
+			"$path" : "TestEnv/Assets/Lighting",
 			"$properties" : {
 				"Technology" : "ShadowMap",
 				"ClockTime" : 14,

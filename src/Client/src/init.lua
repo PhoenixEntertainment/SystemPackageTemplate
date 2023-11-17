@@ -24,7 +24,7 @@ local Generation_Interval = 3 --The interval (in seconds) at which to generate n
 function ExampleController:GetGUID()
 	self:Log("[Example Controller] Getting new GUID from server.")
 
-	return self.Services.ExampleService:GetGUID()
+	return ExampleService:GetGUID()
 end
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -32,7 +32,7 @@ end
 -- @Description : Called when the Controller module is first loaded.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function ExampleController:Init()
-	ExampleService = self:GetService("ExampleService")
+	ExampleService = self:GetService("SystemServer")
 
 	self:DebugLog("[Example Controller] Initialized!")
 end

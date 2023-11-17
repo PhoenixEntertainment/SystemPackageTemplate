@@ -1,3 +1,3 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-return require(ReplicatedStorage.Packages["systemname-client"])
+return require(ReplicatedStorage.Packages["system-client"])
